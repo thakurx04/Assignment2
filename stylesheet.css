@@ -1,0 +1,188 @@
+/* Reset default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Maintains consistent element sizing */
+}
+
+/* Base Styling for Page */
+body {
+    font-family: 'Lato', sans-serif; /* Updated font for a more modern feel */
+    font-size: 16px; /* Adjusted font size for improved readability */
+    line-height: 1.7; /* Balanced text spacing */
+    background-color: #e4dada; /* Soft neutral tone */
+    color: #1a1a1a; /* High-contrast dark gray for better readability */
+}
+
+/* Wrapper for Content Layout */
+#container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto; /* Centers content */
+    position: relative;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-top: 30px;
+    color: #c65e0f; /* Warm orange for a strong visual impact */
+}
+
+header h1 {
+    font-size: 3em; /* Slightly larger for emphasis */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #2b2929; /* Dark gray for contrast */
+}
+
+/* Flexbox Structure */
+main {
+    display: flex;
+    flex-direction: row-reverse; /* No changes to layout */
+    margin-top: 30px;
+    gap: 30px;
+}
+
+/* Sidebar Configuration */
+.left {
+    flex: 0 0 28%; /* Maintaining the same proportions */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Main Content Layout */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Section Styling */
+section {
+    flex: 1 1 38%; /* Keeping original sizing */
+    padding: 20px;
+    border-top: 8px solid; /* Retained thickness */
+    margin-bottom: 30px;
+}
+
+section:nth-of-type(1) {
+    border-color: #5d21f6; /* Vibrant teal accent */
+}
+
+section:nth-of-type(2) {
+    border-color: #fd0769; /* Bold pink for contrast */
+}
+
+section:nth-of-type(3) {
+    border-color: #0ec41d; /* Cool azure tone */
+}
+
+section h2 {
+    font-size: 1.8em; /* Slight font increase for readability */
+    margin-bottom: 12px;
+    color: #222;
+}
+
+section ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+section li {
+    margin-bottom: 18px;
+}
+
+section li h3 {
+    font-size: 1.4em; /* Slightly larger for better hierarchy */
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+section li p {
+    font-size: 1em;
+    color: #141313; /* Slightly softer gray */
+}
+
+section li strong {
+    color: #d92842; /* Dark red for emphasis */
+}
+
+/* Sidebar Enhancements */
+aside {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+aside figure {
+    position: relative;
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+}
+
+aside figcaption {
+    font-size: 1em;
+    color: #555; /* Slightly darker for legibility */
+}
+
+aside:nth-of-type(2) {
+    padding: 20px;
+    background-color: #f3f3f3; /* Light gray for subtle separation */
+    border: 1px solid #807e7e; /* Soft border */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+aside:nth-of-type(2) h2 {
+    font-size: 1.5em; /* Increased slightly for emphasis */
+    margin-bottom: 14px;
+    color: #222;
+}
+
+aside:nth-of-type(2) ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside:nth-of-type(2) li {
+    font-size: 1em;
+    margin-bottom: 12px;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Preserves stacking for small screens */
+    }
+
+    .left, 
+    .right {
+        width: 100%;
+    }
+
+    section,
+    aside {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 2.6em; /* Adjusted slightly */
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+}
